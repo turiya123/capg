@@ -1,1 +1,98 @@
 
+1.package day1;
+
+import java.util.Scanner;
+
+public class Question1 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int english_m=sc.nextInt();
+		int java=sc.nextInt();
+		int db=sc.nextInt();
+		int springtools=sc.nextInt();
+		float total = english_m+java+db+springtools;
+		System.out.println("Total marks" + total);
+		System.out.println("Avg"+total/4);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+2.
+package day1;
+import java.util.Scanner;
+public class Question2 {
+	public static void main(String[] args) {
+		int basic;
+		double res;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the baisc salary:");
+		basic = sc.nextInt();
+		if(basic < 200000) {
+			double hra = 0.4*basic;
+			double da = 0.6*(basic+hra);
+			res = basic + hra + da;
+
+		}else if(basic >= 200000 && basic <= 600000) {
+			double hra = 0.4*basic;
+			double da = 0.6*(basic+hra);
+			double tax = 0.1*basic;
+			res = basic + hra + da-tax;
+
+		}else {
+			double hra = 0.4*basic;
+			double da = 0.6*(basic+hra);
+			double tax = 0.2*basic;
+			res = basic + hra + da-tax;
+			}
+			System.out.println(res);
+			// TODO Auto-generated method stub
+
+			}
+
+}
+
+3.
+package day1;
+
+import java.util.Scanner;
+
+public class Question3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		int date = sc.nextInt();
+		if(date>=1 && date<=31) {
+			if(date>=11 && date<=13) {
+				System.out.println("Date is :"+Integer.toString(date)+"th");
+			}else {
+				switch(date%10){
+				case 1:
+					System.out.println("Date is :"+Integer.toString(date)+"st");
+					break;
+				case 2: 
+					System.out.println("Date is :"+Integer.toString(date)+"nd");
+					break;
+				case 3: 
+					System.out.println("Date is :"+Integer.toString(date)+"rd");
+					break;
+				default:
+					System.out.println("Date is: "+Integer.toString(date)+"th");
+		}
+		
+		}	
+	}
+		else {
+			System.out.println("Invalid Input");
+		}
+	}
+}
