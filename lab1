@@ -1,1 +1,153 @@
 
+package Lab1;
+
+import java.util.Scanner;
+
+public class Cube1 {
+	public static int cubes(int n) {
+		int r,sum=0;
+		while(n!=0){
+			r=n%10;
+			sum+=r*r*r;  //cube of each digit
+			n/=10;
+		}
+		return sum;
+	}
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		int n= sc.nextInt();
+		System.out.println("Cube is: ");
+		System.out.println(cubes(n));
+		
+	}
+
+}
+
+package Lab1;
+
+import java.util.Scanner;
+
+public class Difference {
+
+	public static int square(int n) {
+		int sum=0;
+		int sum1 =0;
+		while(n!=0){
+			sum+=n*n;  //square
+			sum1+=n;
+		  
+			n-=1;
+		}
+		return sum-sum1*sum1;
+	}
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number: ");
+		int n= sc.nextInt();
+		System.out.println("Difference is: ");
+		System.out.println(square(n));
+		
+	}
+
+}
+
+
+
+
+package Lab1;
+
+import java.util.Scanner;
+
+public class Fibanocci3 {
+	  
+		public static void main(String args[])  
+		{
+		 Scanner sc =new Scanner(System.in);
+		 
+		 System.out.println("Enter the count: ");
+		 int count=sc.nextInt();
+		 
+		 int n1=1,n2=1,n3=0;
+
+		 //System.out.print(n1+" "+n2); //printing 1 and 1    
+		   
+		 for(int i=2;i<count;++i) //loop starts from 2 because 0 and 1 are already printed    
+		 {    
+		  n3=n1+n2;    
+		//  System.out.print(" "+n3);    //to get the series
+		  n1=n2;    
+		  n2=n3;    
+		 }    
+		 System.out.print("The nth number is\n"+n3);
+		}} 
+
+	
+	        
+          package Lab1;
+import java.util.Scanner;
+public class Increasing {
+	public static boolean CheckNumber(int num) {
+		boolean f=false;
+		int n = num % 10;
+		num /= 10;
+		while(num > 0) {
+			if(n <= (num%10)) {
+				f=true;
+				break;
+			}
+			n = num % 10;
+			num /= 10;
+		}
+		return f;
+	}
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num;
+		Scanner s = new Scanner(System.in);
+		System.out.println("Enter number :");
+		num=s.nextInt();
+		if(CheckNumber(num)) {
+			System.out.println("Digits are not in increasing order");
+		} else {
+			System.out.println("Digits are in increasing order");
+		}
+	}
+}
+
+	
+  package Lab1;
+
+import java.util.Scanner;
+
+public class Power8 {
+
+	public static boolean isPowerOfTwo(int n) {
+        if (n == 0)
+            return false;
+         
+        while (n != 1){
+            if (n % 2 != 0)  //divisability
+                return false;
+            n = n / 2;
+        }
+        return true;
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter n :");
+		int n=sc.nextInt();
+		if(isPowerOfTwo(n)) {
+			System.out.println("Number is power of 2");
+		}
+		else {
+			System.out.println("Number is not power of 2");
+		}
+	}
+}
