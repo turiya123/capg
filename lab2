@@ -1,0 +1,106 @@
+package Lab2;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Alphabetical {
+
+	public static void main(String[] args) {
+		int n;
+		Alphabetical two = new Alphabetical();		
+		System.out.println("Number of Elements in the array: ");
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		System.out.println("Enter the elements:");
+		String[] arr = new String[n];
+		for(int i = 0; i < n; i++) {
+			arr[i] = sc.next();
+		}
+		two.sortStrings(arr);
+		
+		
+	}
+	
+	public String[] sortStrings(String arr[]) {
+		Arrays.sort(arr);
+		
+		
+		
+		return arr;
+	}
+}
+
+
+package Lab2;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Reverse {
+
+	public static void main(String[] args) {
+		int n, i;
+		Reverse three = new Reverse ();
+		System.out.println("Enter the number of elements: ");
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		System.out.println("Enter the elements:");
+		int[] arr = new int[n];
+		for(i = 0; i < n; i++) {
+			arr[i] = sc.nextInt();
+		}
+		System.out.println("Output:"+three);
+		three.Sort(arr);
+		for(i = 0; i < n; i++) {
+			System.out.print(arr[i] + " ");
+		}
+	}
+	
+	public int[] Sort(int arr[]) {
+		/*int rev;
+		for(int i = 0; i < arr.length; i++) {
+			rev = 0;
+			while(arr[i] != 0) {
+				int digit = arr[i] % 10;
+				rev = (rev * 10) + digit;
+				arr[i] /= 10;
+			}
+			arr[i] = rev;
+		}
+		*/
+		Arrays.sort(arr);
+		return arr;
+	}
+}	
+
+
+package Lab2;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Smallest1 {
+	
+	public static void main(String[] args) {
+		
+		int n;
+		Smallest1 one = new Smallest1();
+		System.out.println("Enter the number of elements: ");
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+		System.out.println("Enter the elements: ");
+		int[] arr = new int[n];
+		for(int i = 0; i < n; i++) {
+			arr[i] = sc.nextInt();
+		}
+		sc.close();
+		System.out.println("The second smallest element of the array is: " + one.getSecondSmallest(arr));
+	}
+	
+	public int getSecondSmallest(int arr[]) {
+		Arrays.sort(arr);
+		return arr[1];
+	}
+}
+
+	
