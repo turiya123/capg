@@ -1,0 +1,7 @@
+public interface Service {
+	public void getEmployeeDetails();
+	public void findInsuranceschema(double salary);
+	public void displayEmpDetails();
+	
+}
+© 2021 GitHub, In
