@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	 
+	 
+	 <bean id="account" class="com.abc.beans.Account">
+	 	<constructor-arg value="101" name="accId"/>
+	 	<constructor-arg value="Ramesh" name="accountHolderName"/>
+	 	<constructor-arg value="2000" name="balance"/>
+	 	
+	 </bean>
+	 
+	 <bean id="account2" class="com.abc.beans.Account">
+	 	<property name="accId" value="102"></property>
+	 	<property name="accountHolderName" value="Ashish"></property>
+	 	<property name="balance" value="1500"></property>
+	 	<property name="policy" ref="policy1"></property>
+	 </bean>
+	 
+	 <bean id="policy1" class="com.abc.beans.Policy">
+	 	<property name="pilicyId" value="777"></property>
+	 	<property name="policyName" value="Policy-A"></property>
+	 	
+	 </bean>
+	 
+	 
+	 
+</beans>
